@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $erro = "";
 $numero = null;
 
-$valorMax = 17;
+$valorMax = 10;
 
 if (isset($_GET['numero'])) {
     $numeroSelec = intval($_GET['numero']);
