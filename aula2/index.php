@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 require_once './classe/Pessoa.php';
 require_once './classe/CpfCnpj.php';
 
-$cpfCnpj = CpfCnpj::cpfNaoConfiavel('82.359.808/0001-24');
+$cpfCnpj = CpfCnpj::cpfConfiavel('145896547');
 
 $pessoa = new Pessoa(
     'Rejman Nascimento',

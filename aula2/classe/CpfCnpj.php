@@ -10,11 +10,19 @@ class CpfCnpj
         $this->documento = $documento;
     }
 
-    public static function cpfNaoConfiavel(string $cpfNaoConfiavel): self
+   public static function cpfConfiavel(string $cpfConfiavel): self
     {
-        $valorNovo = preg_replace('/[^0-9]/', '', $cpfNaoConfiavel);
+        $numeroNovo = preg_replace('/[^0-9]/', '', $cpfConfiavel);
 
-        return new self($valorNovo);
+        $numeros = strlen($numeroNovo);
+
+        if ($numeros <= 11) {
+            $numeroNovo = str_pad($numeroNovo, 11, '0', STR_PAD_LEFT);
+        } else {
+            $numeroNovo = str_pad($numeroNovo, 14, '0', STR_PAD_LEFT);
+        }
+
+        return new self($numeroNovo);
     }
 
     public function getDocumento(): string
