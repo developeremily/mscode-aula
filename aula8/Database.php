@@ -43,7 +43,6 @@ class Database // Define a classe Database
         } catch (\Throwable $throwable) {
             // Se ocorrer erro, mostra a mensagem
             echo "Erro inesperado: " . $throwable->getMessage();
-
         }
 
         // Retorna a conexão criada
