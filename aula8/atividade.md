@@ -1,0 +1,2 @@
+- criar um aluno e realizar a matricula em 1 ou mais cursos
+- quero poder mudar de curso
